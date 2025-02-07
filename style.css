@@ -5,8 +5,8 @@
   box-sizing: border-box;
 }
 html, body {
-  height: 100%; /* O html e body devem ter altura total */
-  margin: 0; /* Remover margens padrão */
+  height: 100%;
+  margin: 0; 
 }
 
 body {
