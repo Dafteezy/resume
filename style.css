@@ -4,6 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+  height: 100%; /* O html e body devem ter altura total */
+  margin: 0; /* Remover margens padrão */
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
