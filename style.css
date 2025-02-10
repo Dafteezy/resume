@@ -7,6 +7,8 @@
 html, body {
   height: 100%;
   margin: 0; 
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -72,8 +74,14 @@ nav ul {
 }
 nav ul li {
   margin-left: 1.5rem;
+  margin: 15px 0;
+  text-align: center;
 }
 nav ul li a {
+  font-size: 1rem;
+  padding: 10px;
+  display: inline-block;
+  color: #333;
   transition: color 0.3s;
 }
 nav ul li a:hover {
@@ -168,12 +176,21 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
+  position: relative;
+  z-index: 5;
+}
 }
 footer a {
   color: #ffc107;
 }
 footer .social-links a {
   margin: 0 10px;
+  position: relative; 
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 /* Formulário de contato (não utilizado na página de contato atual) */
@@ -220,6 +237,13 @@ button[type="submit"]:hover {
   .menu-toggle {
     display: block;
   }
+
+  @media (max-width: 768px) {
+    .hero-container img {
+      max-width: 90%;
+    }
+  }
+
   nav ul {
     flex-direction: column;
     background-color: #fff;
@@ -227,16 +251,39 @@ button[type="submit"]:hover {
     top: 60px;
     right: 0;
     width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: none;
+    padding: 20px 0; 
   }
   nav ul.show {
     display: block;
   }
   nav ul li {
-    margin: 10px 0;
+    margin: 15px 0;
+    text-align: center;
   }
 }
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+}
+
+a, button, .menu-toggle {
+  cursor: pointer;
+}
+
+.hero-container {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  height: 100vh; 
+}
+
+.hero-container img {
+  max-width: 100%; 
+  height: auto; 
+  margin-top: 20px;
 }

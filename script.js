@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
       navList.classList.toggle('show');
     });
   }
-  
-  // Validação simples do formulário de contato, se existir na págin
-  };
+// Fecha o menu ao clicar fora
+document.addEventListener('click', function (event) {
+  if (!menuToggle.contains(event.target) && !navList.contains(event.target)) {
+    navList.classList.remove('show');
+  }
+});
+});
